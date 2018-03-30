@@ -24,3 +24,5 @@ RUN pip install GPyOpt \
 
 RUN pip install sphinx \
     pytest
+
+RUN pip install edward
