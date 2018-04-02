@@ -26,3 +26,5 @@ RUN pip install sphinx \
     pytest
 
 RUN pip install edward
+
+RUN pip install feather-format
