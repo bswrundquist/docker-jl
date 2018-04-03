@@ -28,3 +28,8 @@ RUN pip install sphinx \
 RUN pip install edward
 
 RUN pip install feather-format
+
+RUN pip install graphviz \
+    pydot
+
+
