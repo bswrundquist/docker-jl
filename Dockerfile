@@ -32,4 +32,4 @@ RUN pip install feather-format
 RUN pip install graphviz \
     pydot
 
-
+RUN pip install conx
