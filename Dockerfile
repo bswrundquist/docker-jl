@@ -33,3 +33,6 @@ RUN pip install graphviz \
     pydot
 
 RUN pip install conx
+
+RUN pip install lime
+
