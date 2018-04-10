@@ -34,5 +34,6 @@ RUN pip install graphviz \
 
 RUN pip install conx
 
-RUN pip install lime
+RUN pip install lime \
+    shap
 
