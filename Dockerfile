@@ -37,3 +37,6 @@ RUN pip install conx
 RUN pip install lime \
     shap
 
+RUN conda install pyyaml mkl mkl-include setuptools cmake cffi typing
+
+RUN conda install pytorch torchvision -c pytorch
