@@ -32,10 +32,7 @@ RUN pip install feather-format
 RUN pip install graphviz \
     pydot
 
-RUN pip install conx
-
-RUN pip install lime \
-    shap
+RUN pip install lime 
 
 RUN conda install pyyaml mkl mkl-include setuptools cmake cffi typing
 
