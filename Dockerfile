@@ -37,3 +37,5 @@ RUN pip install lime
 RUN conda install pyyaml mkl mkl-include setuptools cmake cffi typing
 
 RUN conda install pytorch torchvision -c pytorch
+
+RUN pip install pyro-ppl gym
