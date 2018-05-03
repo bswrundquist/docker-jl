@@ -39,3 +39,9 @@ RUN conda install pyyaml mkl mkl-include setuptools cmake cffi typing
 RUN conda install pytorch torchvision -c pytorch
 
 RUN pip install pyro-ppl gym
+
+USER root
+RUN apt-get update
+RUN apt-get install -y g++ libc-dev unixodbc-dev
+USER $NB_UID
+RUN pip install pyodbc
