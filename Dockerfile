@@ -42,3 +42,4 @@ RUN pip install pyro-ppl gym
 RUN pip install tables
 
 RUN pip install JayDeBeApi
+RUN pip install click
