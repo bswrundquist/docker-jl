@@ -40,8 +40,5 @@ RUN conda install pytorch torchvision -c pytorch
 
 RUN pip install pyro-ppl gym
 RUN pip install tables
-USER root
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends g++ libc-dev unixodbc-dev
-USER $NB_UID
-RUN pip install pyodbc
+
+RUN pip install JayDeBeApi
