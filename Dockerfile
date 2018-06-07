@@ -43,3 +43,12 @@ RUN pip install tables
 
 RUN pip install JayDeBeApi
 RUN pip install Click
+
+RUN pip install keras-rl
+RUN pip install tensorforce
+RUN pip install deap
+
+USER root		 
+RUN apt-get update		 
+RUN apt-get install -y install default-jdk		
+USER $NB_UID		
