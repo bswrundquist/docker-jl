@@ -50,5 +50,5 @@ RUN pip install deap
 
 USER root		 
 RUN apt-get update		 
-RUN apt-get install -y install default-jdk		
+RUN apt-get install -y default-jdk		
 USER $NB_UID		
