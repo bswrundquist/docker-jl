@@ -51,4 +51,19 @@ RUN pip install deap
 USER root		 
 RUN apt-get update		 
 RUN apt-get install -y default-jdk		
-USER $NB_UID		
+USER $NB_UID	
+
+USER root
+
+RUN apt-get update
+
+RUN apt install -y libgl1-mesa-dev libglu1-mesa-dev
+RUN apt install -y freeglut3-dev
+RUN apt install -y python3-opengl
+RUN apt install -y python3-pydot graphviz
+
+USER $NB_UID
+
+RUN pip3 install pydot-ng
+RUN conda install -y graphviz
+
