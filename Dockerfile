@@ -67,3 +67,5 @@ USER $NB_UID
 RUN pip3 install pydot-ng
 RUN conda install -y graphviz
 
+RUN pip install pyDOE
+
