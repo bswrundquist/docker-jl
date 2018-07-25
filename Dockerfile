@@ -60,11 +60,14 @@ RUN apt-get update
 RUN apt install -y libgl1-mesa-dev libglu1-mesa-dev
 RUN apt install -y freeglut3-dev
 RUN apt install -y python3-opengl
-RUN apt install -y python3-pydot graphviz
+RUN apt install -y python3-pydot graphviz 
+RUN apt install -y cmake
+RUN apt install -y zlib1g-dev
 
 USER $NB_UID
 
-RUN pip3 install pydot-ng
+RUN pip install gym[atari]
+RUN pip install pydot-ng
 RUN conda install -y graphviz
 
 RUN pip install pyDOE
