@@ -1,13 +1,8 @@
 FROM jupyter/datascience-notebook
 
+RUN conda install python==3.6.5 --yes
+
 RUN conda update numpy
-
-RUN conda install --quiet --yes \
-    'tensorflow' \
-    'keras' && \
-    conda clean -tipsy && \
-    fix-permissions $CONDA_DIR
-
 
 RUN conda install --quiet --yes \
     'plotly' \
@@ -25,8 +20,6 @@ RUN pip install GPyOpt \
 RUN pip install sphinx \
     pytest
 
-RUN pip install edward
-
 RUN pip install feather-format
 
 RUN pip install graphviz \
@@ -42,20 +35,12 @@ RUN pip install pyro-ppl gym
 RUN pip install tables
 
 RUN pip install JayDeBeApi
-RUN pip install Click
 
-RUN pip install keras-rl
-RUN pip install tensorforce
 RUN pip install deap
 
 USER root		 
 RUN apt-get update		 
-RUN apt-get install -y default-jdk		
-USER $NB_UID	
-
-USER root
-
-RUN apt-get update
+RUN apt-get install -y default-jre
 
 RUN apt install -y libgl1-mesa-dev libglu1-mesa-dev
 RUN apt install -y freeglut3-dev
@@ -71,4 +56,5 @@ RUN pip install pydot-ng
 RUN conda install -y graphviz
 
 RUN pip install pyDOE
-RUN pip install hyperas
+
+USER root
