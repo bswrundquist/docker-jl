@@ -56,5 +56,8 @@ RUN pip install pydot-ng
 RUN conda install -y graphviz
 
 RUN pip install pyDOE
+RUN pip install Faker
+RUN pip install shap
 
 USER root
+
