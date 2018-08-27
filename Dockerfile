@@ -29,7 +29,7 @@ RUN pip install lime
 
 RUN conda install pyyaml mkl mkl-include setuptools cmake cffi typing
 
-RUN conda install pytorch torchvision -c pytorch
+RUN conda install pytorch-cpu torchvision-cpu -c pytorch
 
 RUN pip install pyro-ppl gym
 RUN pip install tables
