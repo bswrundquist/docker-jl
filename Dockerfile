@@ -59,5 +59,7 @@ RUN pip install pyDOE
 RUN pip install Faker
 RUN pip install shap
 
+RUN pip install mysqlclient
+
 USER root
 
