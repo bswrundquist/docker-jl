@@ -59,9 +59,11 @@ RUN pip install pyDOE
 RUN pip install Faker
 RUN pip install shap
 
-RUN pip install mysqlclient
+RUN pip install pymssql
 
 USER root
 
 RUN pip install cryptography
+RUN pip install pycryptodomex
+RUN pip install pynacl
 RUN conda install -c conda-forge shap 
