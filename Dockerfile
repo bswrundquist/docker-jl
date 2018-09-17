@@ -63,3 +63,5 @@ RUN pip install mysqlclient
 
 USER root
 
+RUN pip install cryptography
+RUN conda install -c conda-forge shap 
