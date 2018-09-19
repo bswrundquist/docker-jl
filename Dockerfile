@@ -67,3 +67,5 @@ RUN pip install cryptography
 RUN pip install pycryptodomex
 RUN pip install pynacl
 RUN conda install -c conda-forge shap 
+RUN conda install -c conda-forge hdbscan
+
