@@ -70,3 +70,4 @@ RUN conda install -c conda-forge shap
 RUN conda install -c conda-forge hdbscan
 
 RUN pip install papermill
+RUN pip install filterpy
