@@ -71,3 +71,4 @@ RUN conda install -c conda-forge hdbscan
 
 RUN pip install papermill
 RUN pip install filterpy
+RUN pip install fbprophet
