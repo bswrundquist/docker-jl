@@ -74,3 +74,6 @@ RUN pip install filterpy
 RUN pip install fbprophet
 
 RUN pip install humanize
+
+RUN pip install scikit-optimize
+
