@@ -1,5 +1,7 @@
 FROM jupyter/datascience-notebook
 
+USER root
+
 RUN conda install python==3.6.5 --yes
 
 RUN conda update numpy
@@ -37,8 +39,7 @@ RUN pip install tables
 RUN pip install JayDeBeApi
 
 RUN pip install deap
-
-USER root		 
+	 
 RUN apt-get update		 
 RUN apt-get install -y default-jre
 
@@ -49,7 +50,6 @@ RUN apt install -y python3-pydot graphviz
 RUN apt install -y cmake
 RUN apt install -y zlib1g-dev
 
-USER $NB_UID
 
 RUN pip install gym[atari]
 RUN pip install pydot-ng
@@ -60,8 +60,6 @@ RUN pip install Faker
 RUN pip install shap
 
 RUN pip install pymssql
-
-USER root
 
 RUN pip install cryptography
 RUN pip install pycryptodomex
@@ -77,5 +75,4 @@ RUN pip install humanize
 
 RUN pip install scikit-optimize
 
-RUN pip install pyLDAvis
 
