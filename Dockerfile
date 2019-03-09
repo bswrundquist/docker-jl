@@ -75,4 +75,4 @@ RUN pip install humanize
 
 RUN pip install scikit-optimize
 
-
+RUN pip install xgboost
