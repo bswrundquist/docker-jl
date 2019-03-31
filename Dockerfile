@@ -1,4 +1,5 @@
-FROM jupyter/datascience-notebook
+# FROM jupyter/datascience-notebook
+FROM bswrundquist/tensorflow-notebook-gpu
 
 USER root
 
