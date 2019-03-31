@@ -1,9 +1,7 @@
 # FROM jupyter/datascience-notebook
-FROM bswrundquist/tensorflow-notebook-gpu
+FROM bswrundquist/datascience-notebook-gpu
 
 USER root
-
-RUN conda install python==3.6.5 --yes
 
 RUN conda update numpy
 
@@ -31,8 +29,11 @@ RUN pip install graphviz \
 RUN pip install lime 
 
 RUN conda install pyyaml mkl mkl-include setuptools cmake cffi typing
+RUN conda install -c mingfeima mkldnn
 
-RUN conda install pytorch-cpu torchvision-cpu -c pytorch
+RUN conda install -c cpbotha magma-cuda10
+
+RUN conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
 
 RUN pip install pyro-ppl gym
 RUN pip install tables
