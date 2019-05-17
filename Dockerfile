@@ -77,4 +77,4 @@ RUN pip install xgboost
 
 RUN pip install flair
 RUN pip install nltk
-RUN pytorch-pretrained-bert
+RUN pip install pytorch-pretrained-bert
