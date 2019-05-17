@@ -31,10 +31,6 @@ RUN pip install lime
 RUN conda install pyyaml mkl mkl-include setuptools cmake cffi typing
 RUN conda install -c mingfeima mkldnn
 
-RUN conda install -c cpbotha magma-cuda10
-
-RUN conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
-
 RUN pip install pyro-ppl gym
 RUN pip install tables
 
@@ -78,3 +74,7 @@ RUN pip install humanize
 RUN pip install scikit-optimize
 
 RUN pip install xgboost
+
+RUN pip install flair
+RUN pip install nltk
+RUN pytorch-pretrained-bert
